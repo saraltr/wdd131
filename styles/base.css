@@ -82,8 +82,14 @@ h1 {
     text-align: center;
 }
 
-.card ul li {
-    margin: .5em;
+.card ul li a {
+    display: inline-block;
+    margin: .4em;
+    border-bottom: 3px solid transparent;
+}
+
+.card ul li a:hover {
+    border-bottom-color: var(--primary-color);
 }
 
 .about {
