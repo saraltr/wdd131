@@ -1,6 +1,6 @@
 :root {
     --primary-color:#231942;
-    --secondary-color:#5e548e;
+    --secondary-color:#473f6e;
     --accent : #77548e;
     --accent2: #ddd;
 }
@@ -28,6 +28,7 @@ nav {
     justify-content:space-around;
     background: var(--secondary-color);
     padding: 1rem;
+    color: #fff;
 }
 
 nav a {
