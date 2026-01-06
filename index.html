@@ -3,10 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Sara Latorre</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Home Page Sara Latorre">
+    <meta name="author" content="Sara Latorre">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fugaz+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
 </head>
 <body>
-    <h1>WDD 131 - Sara Latorre</h1>
-    
+
+    <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/sara-latorremurcia/" target="_blank" >LinkedIn</a>
+            <a target="_blank" href=" https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng&id=p33#p33"
+            target="_blank">Scripture</a>
+            <a href="">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Sara Latorre</h1>
+        <section class="card">
+            <h2>About me</h2>
+            <div class="about">
+                <p>My name is Sara, and I am Colombian. I moved to Colombia with my family at the beginning of last December. I have a prior degree in digital communication, as I have always been drawn to new technologies, the web, and the field of programming. In my free time, I enjoy reading, cooking and listening to music.</p>
+                <img src="images/my-pic.jpg" alt="my profile picture">
+            </div>
+            <div class="colombia">
+                <figure>
+                    <img src="images/colombia.jpg" alt="Landscape of Colombia">
+                    <figcaption>Landscape of Colombia</figcaption>
+                </figure>
+                <p>
+                    Colombia is a vibrant country located in the northwest of South America, bordered by the Caribbean Sea and the Pacific
+                    Ocean. It is known for its rich cultural heritage shaped by Indigenous,
+                    European, and African influences. The country offers a vast diversity of landscapes, from the Andes Mountains
+                    and Amazon rainforest to the Caribbean and Pacific coasts, making it one of the most geographically diverse countries in
+                    the world.
+                </p>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a></li>
+                <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+                <li><a href="https://www.theodinproject.com/">The Odin Project</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;
+            <span id="currentyear"></span>
+            Sara Latorre | 
+            Colombia
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
 </body>
 </html>
