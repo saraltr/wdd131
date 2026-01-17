@@ -11,7 +11,7 @@ header {
     padding: 20px;
 }
 
-header h1 {
+.headerTop h2 {
     color: #fff;
 }
 
@@ -34,10 +34,11 @@ nav ul {
     display: flex;
     flex-direction: column;
     list-style: none;
+    padding: 0;
 }
 
 .active a {
-    background-color: #ffffffb6;
+    background-color: #ffffffe4;
     color: #3d405b;
 
 }
@@ -52,7 +53,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ffffffb6;
+    background-color: #ffffffe4;
     color: #3d405b;
 }
 
@@ -92,7 +93,7 @@ section {
 #hamburgerBtn {
     background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     color: #fff;
 }
