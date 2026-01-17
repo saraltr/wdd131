@@ -1,0 +1,48 @@
+@media (min-width: 700px) {
+    .temples {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 800px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .headerTop {
+        margin: 0;
+    }
+
+    nav {
+        margin-top: 0;
+    }
+
+    .temples {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #hamburgerBtn {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+    }
+
+    .navigation {
+        display: flex;
+        max-height: none;
+    }
+
+    .navigation li {
+        border: none;
+    }
+}
