@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page</title>
+    <meta name="description" content="Country profile page for France with data and weather information.">
+    <meta name="author" content="Sara Latorre">
+    <link rel="stylesheet" href="styles/place-base.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script defer src="scripts/places.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+</head>
+<body>
+    <main>
+    <h1>France</h1>
+    <picture class="hero">
+        <source srcset="images/paris-large.webp" media="(min-width: 550px)">
+        <img src="images/paris-small.webp" alt="Orem Utah Temple">
+    </picture>
+
+    <section class="data">
+        <h2>Data</h2>
+        <p><strong>Area:</strong> 672 051 km²</p>
+        <p><strong>Population:</strong> 69,1 million</p>
+        <p><strong>Capital:</strong> Paris</p>
+        <p><strong>Languages:</strong> French</p>
+        <p><strong>Currency:</strong> Euro (EUR)</p>
+        <p><strong>Time Zone:</strong> Central European Time (CET, UTC+1)</p>
+        <p><strong>Calling Code:</strong> +33</p>
+        <p><strong>Internet TLD:</strong> .fr</p>
+    </section>
+
+    <section class="weather">
+        <h2>Weather</h2>
+        <img src="images/weather.svg" alt="weather icon">
+        <p><strong>Temperature: </strong><span id="temp"> 10</span>°C</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p><strong>Wind:</strong> <span id="windSpeed">5</span> km/h</p>
+        <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+    </section>
+
+    <footer>
+        <p>&copy;
+            <span id="currentyear"></span>
+            Sara Latorre |
+            Colombia
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    </main>
+    
+</body>
+</html>
