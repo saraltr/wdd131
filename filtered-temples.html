@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temples Picture Album</title>
+    <meta name="description" content="Responsive temple picture album activity with an accessible design">
+    <meta name="author" content="Sara Latorre">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script defer src="scripts/filtered-temples.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="headerTop">
+            <h2>Temple Album</h2>
+            <button id="hamburgerBtn">
+                <span class="open">&#9776;</span>
+                <span class="close">X</span>
+            </button>
+
+        </div>
+
+        <nav>
+            <ul class="navigation">
+                <li class="active"><a href="#" data-filter="all">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <h1>Home</h1>
+        <section class="temples">
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy;
+            <span id="currentyear"></span>
+            Sara Latorre |
+            Colombia
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
