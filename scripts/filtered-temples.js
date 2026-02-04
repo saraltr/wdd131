@@ -154,14 +154,12 @@ links.forEach(link => {
     }
     else if (filter === "old") {
       filteredTemples = temples.filter(temple => {
-        const year = parseInt(temple.dedicated.split(",")[0]);
-        return year < 1900;
+        return temple.dedicated.split(",")[0] < 1900;
       });
     }
     else if (filter === "new") {
       filteredTemples = temples.filter(temple => {
-        const year = parseInt(temple.dedicated.split(",")[0]);
-        return year > 2000;
+        return temple.dedicated.split(",")[0] < 2000;
       });
     }
     else if (filter === "large") {
