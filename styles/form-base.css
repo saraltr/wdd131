@@ -112,3 +112,25 @@ footer {
     padding: 1rem;
     color: #fff;
 }
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 1rem;
+    }
+
+    .productForm {
+        padding: 1.5rem;
+    }
+
+    .productForm label {
+        font-size: 0.95rem;
+    }
+
+    .productForm input[type="text"],
+    .productForm input[type="date"],
+    .productForm select,
+    .productForm textarea {
+        font-size: 0.95rem;
+    }
+}
