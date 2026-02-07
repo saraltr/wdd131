@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Product review form allowing users to rate a product and provide feedback.">
+    <meta name="author" content="Sara Latorre">
+    <link rel="stylesheet" href="styles/form-base.css">
+    <script defer src="scripts/products.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="productForm">
+            <fieldset>
+                <legend><strong>Product Name</strong></legend>
+                <label for="products">
+                    <select id="products" name="products" required>
+                        <option value="" disabled selected>Select a Product</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset class="rating">
+                <legend><strong>Overall Rating</strong></legend>
+            
+                <label for="rating1"><input type="radio" id="rating1" name="rating" value="1" required> ★</label>
+                <label for="rating2"><input type="radio" id="rating2" name="rating" value="2" required> ★★</label>
+                <label for="rating3"><input type="radio" name="rating" id="rating3" value="3" required> ★★★</label>
+                <label for="rating4"><input type="radio" name="rating" id="rating4" value="4" required> ★★★★</label>
+                <label for="rating5"><input type="radio" name="rating" id="rating5" value="5" required> ★★★★★</label>
+            </fieldset>
+
+            <fieldset>
+                <legend class="sr-only"><strong>Date of Installation</strong></legend>
+
+                <label for="installationDate">
+                    <strong>Date of Installation</strong>
+                    <input type="date" id="installationDate" name="installationDate" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Useful Features</strong></legend>
+                <p>Which features did you find useful in the product?</p>
+                <p><i>(Check all that apply)</i></p>
+            
+                <label for="feature-durability">
+                    <input type="checkbox" id="feature-durability" name="features" value="durability">
+                    Durability
+                </label>
+            
+                <label for="feature-ease">
+                    <input type="checkbox" id="feature-ease" name="features" value="ease-of-use">
+                    Ease of Use
+                </label>
+            
+                <label for="feature-performance">
+                    <input type="checkbox" id="feature-performance" name="features" value="performance">
+                    Performance
+                </label>
+            
+                <label for="feature-design">
+                    <input type="checkbox" id="feature-design" name="features" value="design">
+                    Design
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <strong class="sr-only">
+                        Written Review <span class="optional">(Optional)</span>
+                    </strong>
+                </legend>
+            
+                <label for="writtenReview">
+                    <strong>Written Review <span class="optional">(Optional)</span></strong>
+                </label>
+                <textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend class="sr-only"><strong>User Name <span class="optional">(Optional)</span></strong></legend>
+            
+                <label for="userName">
+                    <strong>User Name <span class="optional">(Optional)</span></strong>
+                </label>
+                <input type="text" id="userName" name="userName">
+            </fieldset>
+
+            <input type="submit" id="submitForm" value="Post Review">
+
+        </form>
+
+    </main>
+    <footer>
+        <p>&copy;
+            <span id="currentyear"></span>
+            Sara Latorre |
+            Colombia
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
