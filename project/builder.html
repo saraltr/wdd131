@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouquet Builder | Gardenia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Faculty+Glyphic&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script defer src="scripts/gardenia.js"></script>
+    <script defer src="scripts/flowers.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headerTop">
+            <a href="/project/index.html" class="brand">
+                <img src="images/gardenia-logo.svg" alt="Gardenia Logo" class="logo">
+                <h1>Gardenia</h1>
+            </a>
+
+            <button id="hamburgerBtn" aria-label="Menu">
+                <span class="open">&#9776;</span>
+                <span class="close">✕</span>
+            </button>
+        </div>
+
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="builder.html">Builder</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="flowers.html">Flowers</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="hero">
+            <img src="images/header.jpg" alt="floral header background" loading="lazy">
+
+            <div class="heroText">
+                <h2>Welcome to Gardenia!</h2>
+                <p>Discover thoughtfully crafted bouquets, explore the language of flowers, and design a custom
+                    arrangement that
+                    feels uniquely yours.</p>
+            </div>
+        </div>
+
+        <div class="builderLayout">
+
+            <section class="instructions">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div>
+                        <h3>1. Choose Your Flowers</h3>
+                        <p>Select the blooms you love.</p>
+                    </div>
+                    <div>
+                        <h3>2. Pick a Size</h3>
+                        <p>Small, medium, or large. You decide.</p>
+                    </div>
+                    <div>
+                        <h3>3. We Craft It</h3>
+                        <p>Our florists hand-arrange your bouquet with care.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="formContainer">
+                <h2>Bouquet Builder</h2>
+                <form method="get" action="thanks.html" class="builderForm">
+
+                    <fieldset>
+                        <legend>
+                            <h3>Personal Information</h3>
+                        </legend>
+                        <label for="fname">First Name *:
+                            <input type="text" id="fname" name="fname" required>
+                        </label>
+
+                        <label for="lname">Last Name *:
+                            <input type="text" id="lname" name="lname" required>
+                        </label>
+
+                        <label for="phone">Phone Number*
+                            <input 
+                            type="tel" 
+                            name="phone"
+                            id="phone"
+                            placeholder="1235551234" required>
+                        </label>
+                        <label for="email">Email
+                            <input type="email" name="email" id="email" required placeholder="someone@gmail.com">
+                        </label>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            <h3>Choose Your Flowers</h3>
+                        </legend>
+                        
+                        <div class="flower-options"></div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>
+                            <h3>Select Size</h3>
+                        </legend>
+
+                        <label for="size">
+                        <select id="size">
+                            <option value="small">Small - $20</option>
+                            <option value="medium">Medium - $30</option>
+                            <option value="large">Large - $40</option>
+                        </select>
+                        </label>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            <h3>Delivery Options*</h3>
+                        </legend>
+                    
+                        <label>
+                            <input type="radio" name="delivery" value="pickup" required>
+                            Store Pickup (Free)
+                        </label>
+                    
+                        <label>
+                            <input type="radio" name="delivery" value="local">
+                            Local Delivery - $10
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            <h3>Card Message</h3>
+                        </legend>
+                        <label for="message">
+                            <textarea name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+                        </label>
+                    </fieldset>
+
+
+
+
+                    <div class="totalContainer">
+                        <h3>Total: $<span id="total">0</span></h3>
+                    </div>
+                    
+                    
+                    <button type="submit" class="btn">Create Bouquet</button>
+
+
+                </form>
+                
+            </section>
+            <div class="preview">
+                <h3>Your Selected Flowers:</h3>                
+                <ul id="selectedFlowers">
+                    <li>No flowers selected yet</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div class="footerContainer">
+    
+            <div class="footerBrand">
+                <a href="/project/index.html" class="brand">
+                    <img src="images/gardenia-logo.svg" alt="Gardenia Logo" class="logo">
+                    <h3>Gardenia</h3>
+                </a>
+                <p>Thoughtfully crafted bouquets for every occation.</p>
+            </div>
+    
+            <div class="footerContact">
+                <h4>Contact</h4>
+                <p>Email: hello@gardenia.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Open: Mon–Sat 9 a.m - 5 p.m</p>
+            </div>
+        </div>
+    
+        <div class="footerBottom">
+            <p>&copy; <span id="currentyear"></span> Gardenia | Sara Latorre</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
