@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue | Gardenia</title>
+    <meta name="author" content="Sara Latorre">
+    <meta name="description" content="Gardenia flower shop catalogue page">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Faculty+Glyphic&display=swap"
@@ -35,7 +37,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="builder.html">Builder</a></li>
                 <li class="active"><a href="catalogue.html">Catalogue</a></li>
-                <li><a href="flowers.html">Flowers</a></li>
             </ul>
         </nav>
 
@@ -47,7 +48,7 @@
             <img src="images/header.jpg" alt="floral header background">
 
             <div class="heroText">
-                <h2>Welcome to Gardenia!</h2>
+                <h2>Catalogue</h2>
                 <p>Discover thoughtfully crafted bouquets, explore the language of flowers, and design a custom
                     arrangement that
                     feels uniquely yours.</p>
@@ -55,7 +56,73 @@
         </div>
 
         <section class="catalogue">
-            <h2 class="title"></h2>
+            <div class="filtersContainer">
+                <h2>☰ Filters</h2>
+                <div class="sizeFilter">
+                    <h3>Size</h3>
+                    <ul>
+                        <li><a href="#" class="size-btn" data-size="Small">Small</a></li>
+                        <li><a href="#" class="size-btn" data-size="Medium">Medium</a></li>
+                        <li><a href="#" class="size-btn" data-size="Large">Large</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="occasionFilter">
+                    <h3>Occasion</h3>
+                    <ul>
+                        <li><a 
+                            href="#"
+                            class="occasion-btn"
+                            data-occasion="Celebration"
+                            >Celebration</a></li>
+                        <li><a href="#"
+                            class="occasion-btn"
+                            data-occasion="Romantic"
+                            >Romantic</a></li>
+                        <li><a href="#"
+                            class="occasion-btn"
+                            data-occasion="Holiday"
+                            >Holiday</a></li>
+                        <li><a href="#"
+                            class="occasion-btn"
+                            data-occasion="Housewarming"
+                            >Housewarming</a></li>
+                        <li><a href="#"
+                            class="occasion-btn"
+                            data-occasion="Sympathy"
+                            >Sympathy</a></li>
+                        <li><a href="#"
+                            class="occasion-btn"
+                            data-occasion="Formal"
+                            >Formal</a></li>
+                    </ul>
+                </div>
+                <div class="priceFilter">
+                    <h3>Price</h3>
+                    <ul>
+                        <li><a href="#" class="price-btn" data-price="under30">Under $30</a></li>
+                        <li><a href="#" class="price-btn" data-price="30to40">$30 to $40</a></li>
+                        <li><a href="#" class="price-btn" data-price="over40">Over $40</a></li>
+                    </ul>
+                </div>
+
+                <div class="colorFilter">
+                    <h3>Color</h3>
+                    <ul>
+                        <li><a href="#" class="color-btn" data-color="Pink">Pink</a></li>
+                        <li><a href="#" class="color-btn" data-color="White">White</a></li>
+                        <li><a href="#" class="color-btn" data-color="Red">Red</a></li>
+                        <li><a href="#" class="color-btn" data-color="Yellow">Yellow</a></li>
+                        <li><a href="#" class="color-btn" data-color="Purple">Purple</a></li>
+                    </ul>
+                </div>
+
+                <button id="clearFilters" class="btn">Clear Filters</button>
+
+
+
+            </div>
         
             <div class="catalogueContainer">
             </div>

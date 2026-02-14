@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bouquet Builder | Gardenia</title>
+    <meta name="author" content="Sara Latorre">
+    <meta name="description" content="Gardenia flower shop bouquet builder form page">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Faculty+Glyphic&display=swap"
@@ -35,7 +37,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="builder.html">Builder</a></li>
                 <li><a href="catalogue.html">Catalogue</a></li>
-                <li><a href="flowers.html">Flowers</a></li>
             </ul>
         </nav>
 
@@ -118,6 +119,7 @@
 
                         <label for="size">
                         <select id="size">
+                            <option value="" disabled selected>Select a size</option>
                             <option value="small">Small - $20</option>
                             <option value="medium">Medium - $30</option>
                             <option value="large">Large - $40</option>
@@ -143,16 +145,12 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>
-                            <h3>Card Message</h3>
-                        </legend>
-                        <label for="message">
-                            <textarea name="message" rows="4" placeholder="Write your message here..."></textarea>
-
-                        </label>
+                        <legend>Card Message</legend>
+                    
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your message here...">
+                        </textarea>
                     </fieldset>
-
-
 
 
                     <div class="totalContainer">

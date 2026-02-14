@@ -92,6 +92,20 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .catalogue {
+        display: grid;
+        grid-column: 200px 3fr;
+        align-items: start;
+    }
+
+    .filtersContainer {
+        grid-column: 1/2;
+    }
+    .catalogueContainer {
+        grid-column: 2/3;
+        gap: 1.5rem;
+    }
         
 }
 

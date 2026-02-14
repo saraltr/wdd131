@@ -2,8 +2,8 @@ const bouquets = [
 
     {
         name: "Sunset Charm",
-        flowers: ["Chrysanthemum", "Rose", "Carnation", "Snapdragon"],
-        colors: ["Orange", "Pink", "Gold"],
+        flowers: ["Chrysanthemums", "Roses", "Carnations", "Snapdragons"],
+        colors: ["Orange", "Pink", "Yellow"],
         size: "Medium",
         occasion: "Housewarming",
         price: 34,
@@ -14,10 +14,10 @@ const bouquets = [
     },
     {
         name: "Classic red roses",
-        flowers: ["Rose", "Carnation"],
-        colors: ["Peach", "Soft Pink"],
+        flowers: ["Roses", "Carnations"],
+        colors: ["Red"],
         size: "Large",
-        occasion: "Gift",
+        occasion: "Romantic",
         price: 35,
         promo: 32.99,
         description: "Red roses are strongly associated with romantic love and passion, perfect for a romantic gesture.",
@@ -26,9 +26,9 @@ const bouquets = [
     },
     {
         name: "Classic Romance",
-        flowers: ["Rose", "Peony"],
-        colors: ["Red", "Pink"],
-        size: "Medium",
+        flowers: ["Roses", "Peonies"],
+        colors: ["White", "Pink"],
+        size: "Small",
         occasion: "Romantic",
         price: 35,
         promo: 30.5,
@@ -38,9 +38,9 @@ const bouquets = [
     },
     {
         name: "Sunny Day",
-        flowers: ["Sunflower", "Daisy"],
+        flowers: ["Sunflowers", "Daisies"],
         colors: ["Yellow", "White"],
-        size: "Large",
+        size: "Medium",
         occasion: "Celebration",
         price: 30,
         promo: 24,
@@ -49,23 +49,23 @@ const bouquets = [
         popularMonths: [4, 6, 7, 8, 9]
     },
     {
-        name: "Elegant Whites",
-        flowers: ["Lily", "Rose"],
-        colors: ["White"],
-        size: "Medium",
+        name: "Elegant Reds",
+        flowers: ["Lilies", "Roses"],
+        colors: ["Red"],
+        size: "Large",
         occasion: "Formal",
-        price: 40,
-        promo: 36.99,
-        description: "A refined bouquet of white lilies and red roses, ideal for formal events.",
+        price: 45,
+        promo: 40.99,
+        description: "A refined bouquet of lilies and red roses, ideal for formal events.",
         image: "images/whites.jpg",
         popularMonths: [1, 2, 11, 12]
     },
     {
         name: "Spring Bloom",
-        flowers: ["Tulip", "Daisy"],
-        colors: ["Pink", "Yellow"],
+        flowers: ["Tulips", "Daisies"],
+        colors: ["Pink"],
         size: "Small",
-        occasion: "Everyday",
+        occasion: "Sympathy",
         price: 25,
         promo: 19.99,
         description: "A light and fresh bouquet inspired by the colors of spring.",
@@ -74,10 +74,10 @@ const bouquets = [
     },
     {
         name: "Modern Orchid",
-        flowers: ["Orchid"],
-        colors: ["Purple", "White"],
+        flowers: ["Orchids"],
+        colors: ["Pink", "White"],
         size: "Small",
-        occasion: "Modern",
+        occasion: "Housewarming",
         price: 45,
         promo: 39.99,
         description: "A minimalist bouquet featuring elegant orchids for a contemporary look.",
@@ -86,7 +86,7 @@ const bouquets = [
     },
     {
         name: "Blush Morning",
-        flowers: ["Ranunculus", "Rose"],
+        flowers: ["Ranunculus", "Roses"],
         colors: ["Blush", "Cream"],
         size: "Medium",
         occasion: "Romantic",
@@ -98,21 +98,21 @@ const bouquets = [
     },
     {
         name: "Wild Garden",
-        flowers: ["Carnations", "Lavender", "Snapdragon"],
-        colors: ["Purple", "White", "Green"],
+        flowers: ["Carnations", "Lavender", "Snapdragons"],
+        colors: ["Purple", "Green"],
         size: "Large",
-        occasion: "Everyday",
-        price: 32,
-        promo: 27.99,
+        occasion: "Sympathy",
+        price: 45,
+        promo: 40.99,
         description: "A loose, slightly wild mix that looks like it was picked straight from a sunny garden.",
         image: "images/wild.jpg",
         popularMonths: [5, 6, 7, 8]
     },
     {
         name: "Winter Calm",
-        flowers: ["Alstroemeria", "Snapdragon", "Eucalyptus", "Succulents"],
-        colors: ["White", "Green"],
-        size: "Large",
+        flowers: ["Alstroemerias", "Snapdragons", "Eucalyptus", "Succulents"],
+        colors: ["Purple", "Green"],
+        size: "Medium",
         occasion: "Holiday",
         price: 42,
         promo: 37.99,
@@ -122,10 +122,10 @@ const bouquets = [
     },
     {
         name: "Peachy Love",
-        flowers: ["Rose", "Carnation"],
+        flowers: ["Roses", "Carnations"],
         colors: ["Peach", "Soft Pink"],
-        size: "Small",
-        occasion: "Gift",
+        size: "Large",
+        occasion: "Sympathy",
         price: 28,
         promo: 22.99,
         description: "Sweet, simple, and full of warmth.",
@@ -164,11 +164,38 @@ if (monthlySection) {
 
     flowersDisplay(bestSellers, popularContainer, true);
 
+    const NumContainer = document.querySelector(".numContainer");
+    const bouquetsCreated = localStorage.getItem("bouquetsNum");
+
+    const p = document.createElement("p");
+
+    if (bouquetsCreated != null && bouquetsCreated!= 0){
+        p.textContent = `Number of bouquets created: ${bouquetsCreated}`
+        NumContainer.appendChild(p);
+
+        const lastDate = localStorage.getItem("lastBouquetDate");
+
+        const dateP = document.createElement("p");
+        dateP.textContent = `Last bouquet created on ${lastDate}`;
+        NumContainer.appendChild(dateP);
+
+    } else {
+        p.innerHTML = "No bouquet created yet. <br> Your bouquet journey starts here. Create your first one!"
+        NumContainer.appendChild(p);
+
+        const btn = document.createElement("a");
+        btn.href = "builder.html";
+        btn.classList.add("btn");
+        btn.textContent = "Create Your First Bouquet";
+        NumContainer.appendChild(btn);
+    }
+
 };
 
 
 function flowersDisplay(type, container, showDescription = false){
 
+    container.innerHTML = "";
     type.forEach(bouquet => {
         const bouquetContainer = document.createElement("div");
         bouquetContainer.classList.add("bouquet")
@@ -253,8 +280,23 @@ if (flowerContainer){
         if (sizeSelect.value === "medium") sizePrice = 30;
         if (sizeSelect.value === "large") sizePrice = 40;
 
-        totalDisplay.textContent = flowerTotal + sizePrice;
+        let deliveryPrice = 0;
+        const selectedDelivery = document.querySelector(
+            'input[name="delivery"]:checked'
+        );
+
+        if (selectedDelivery) {
+
+            if (selectedDelivery.value === "local") {
+                deliveryPrice = 10;
+            }
+        }
+
+        const total = flowerTotal + sizePrice + deliveryPrice;
+
+        totalDisplay.textContent = `${total}`;
     };
+
 
     document.addEventListener("change", calculateTotal);
     document.addEventListener("change", updatePreview);
@@ -300,6 +342,11 @@ if (flowerContainer){
             bouquetsCreated++;
             localStorage.setItem("bouquetsNum", bouquetsCreated);
 
+            const now = new Date();
+
+            const formattedDate = now.toLocaleDateString();
+
+            localStorage.setItem("lastBouquetDate", formattedDate);
         });
     };
 
@@ -307,14 +354,103 @@ if (flowerContainer){
 
 // catalogue
 
-const catalogueSection = document.querySelector(".title")
+const catalogueSection = document.querySelector(".catalogue")
 
 if (catalogueSection) {
-    
-    catalogueSection.textContent = `Catalogue`;
 
     const catalogueContainer = document.querySelector(".catalogueContainer");
 
-    flowersDisplay(bouquets, catalogueContainer);
+    const activeFilters = {
 
-};
+        size: null,
+        occasion: null,
+        color: null,
+        priceRange: null
+    };
+
+    function applyFilters() {
+
+        let filtered = bouquets;
+
+        if (activeFilters.size) {
+            filtered = filtered.filter(b =>
+                b.size === activeFilters.size
+            );
+        }
+
+        if (activeFilters.occasion) {
+            filtered = filtered.filter(b =>
+                b.occasion === activeFilters.occasion
+            );
+        }
+        if (activeFilters.color) {
+            filtered = filtered.filter(b =>
+                b.colors.includes(activeFilters.color)
+            );
+        }
+
+        if (activeFilters.priceRange === "under30") {
+            filtered = filtered.filter(b => b.promo < 30);
+        }
+
+        if (activeFilters.priceRange === "30to40") {
+            filtered = filtered.filter(b => b.promo >= 30 && b.promo <= 40);
+        }
+
+        if (activeFilters.priceRange === "over40") {
+            filtered = filtered.filter(b => b.promo > 40);
+        }
+
+
+        flowersDisplay(filtered, catalogueContainer);
+    }
+
+    document.querySelector(".sizeFilter").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if (!e.target.classList.contains("size-btn"))return;
+
+        activeFilters.size = e.target.dataset.size;
+
+        applyFilters();
+    });
+    document.querySelector(".priceFilter").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if (!e.target.classList.contains("price-btn"))return;
+
+        activeFilters.priceRange = e.target.dataset.price;
+
+        applyFilters();
+    });
+    document.querySelector(".colorFilter").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if (!e.target.classList.contains("color-btn"))return;
+
+        activeFilters.color = e.target.dataset.color;
+
+        applyFilters();
+    });
+
+    document.querySelector(".occasionFilter").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if (!e.target.classList.contains("occasion-btn")) 
+            return;
+
+        activeFilters.occasion = e.target.dataset.occasion;
+
+        applyFilters();
+    });
+
+    document.querySelector("#clearFilters").addEventListener("click", () => {
+
+        activeFilters.size = null;
+        activeFilters.occasion = null;
+
+        flowersDisplay(bouquets, catalogueContainer);
+    });
+
+    flowersDisplay(bouquets, catalogueContainer);
+}
