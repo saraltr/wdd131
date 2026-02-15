@@ -232,6 +232,10 @@ footer {
     padding-top: 1rem;
 }
 
+.footerBottom a {
+    color: var(--seconday-color);
+}
+
 /* popular section */
 
 .popular {
@@ -322,6 +326,13 @@ footer {
     border-bottom: solid;
 }
 
+input:required {
+    border-right: solid 6px var(--primary-color);
+}
+input:required:valid {
+    border-right: solid 6px var(--accent);
+}
+
 .builderForm input[type="text"],
 .builderForm input[type="date"],
 .builderForm input[type="tel"],
@@ -367,7 +378,6 @@ fieldset {
     transform: scale(1.3);
     cursor: pointer;
     accent-color: var(--accent);
-    border: solid px black;
 }
 
 .instructions {
@@ -486,4 +496,26 @@ fieldset {
 
 .catalogue .btn {
     margin-top: .7rem;
+}
+
+/* thank you page */
+
+.thanksSection {
+    color: var(--primary-color);
+    padding: 1.5rem 2rem;
+}
+
+/* references page */
+
+.references {
+    color: var(--primary-color);
+}
+
+.references ul {
+
+    padding: 1.5rem;
+}
+
+.references ul li {
+    padding: .5rem;
 }

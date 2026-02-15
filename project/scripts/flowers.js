@@ -203,6 +203,7 @@ function flowersDisplay(type, container, showDescription = false){
         const bouquetImg = document.createElement("img");
         bouquetImg.src = bouquet.image;
         bouquetImg.alt = `${bouquet.name} bouquet image`;
+        bouquetImg.loading = "lazy";
 
         const h3 = document.createElement("h3");
         h3.textContent = bouquet.name;
@@ -258,6 +259,7 @@ if (flowerContainer){
         const input = document.createElement("input");
         input.type = "checkbox";
         input.value = flower;
+        input.name = "flowers";
 
         label.appendChild(input);
         label.appendChild(document.createTextNode(" " + flower));

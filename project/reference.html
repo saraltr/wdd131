@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogue | Gardenia</title>
+    <title>References | Gardenia</title>
     <meta name="author" content="Sara Latorre">
-    <meta name="description" content="Gardenia flower shop oder placed thank you page">
+    <meta name="description" content="Gardenia flower shop home page">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Faculty+Glyphic&display=swap"
@@ -14,14 +14,15 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
     <script defer src="scripts/gardenia.js"></script>
-    <script defer src="scripts/thankyou.js"></script>
+    <script defer src="scripts/flowers.js"></script>
+
 </head>
 
 <body>
     <header>
         <div class="headerTop">
-            <a href="/project/index.html" class="brand">
-                <img src="images/gardenia-logo.svg" alt="Gardenia Logo" class="logo">
+            <a href="index.html" class="brand">
+                <img src="images/gardenia-logo.svg" alt="Gardenia Logo" class="logo" loading="lazy">
                 <h1>Gardenia</h1>
             </a>
 
@@ -45,39 +46,49 @@
     <main>
 
         <div class="hero">
-            <img src="images/header.webp" alt="floral header background">
+            <img src="images/header.webp" alt="floral header background" loading="lazy">
 
             <div class="heroText">
-                <h2>Welcome to Gardenia!</h2>
-                <p>Discover thoughtfully crafted bouquets, explore the language of flowers, and design a custom
-                    arrangement that
-                    feels uniquely yours.</p>
+                <h2>References</h2>
+                <p></p>
             </div>
         </div>
 
+        <section class="references">
 
-        <section class="thanksSection">
-            <h2>Thank You!</h2>
-            <p>Your custom arrangement has been successfully created. We hope it brings beauty and joy to your day.</p>
-            <div class="creationsInfo">
-
-            </div>
+        <ul>
+            <li>
+                Header Image: Photo by Daniela Eckert on
+                <a href="https://unsplash.com/fr/photos/un-gros-plan-dun-bouquet-de-fleurs-aX2Y0BhR1eo" target="_blank">Unsplash</a>
+            </li>
+        
+            <li>
+                Bouquets Images: Photos founded on
+                <a href="https://bouqs.com/" target="_blank">bouqs.com</a>
+            </li>
+        
+            <li>
+                Creations Image: Photo by Micheile Henderson on
+                <a href="https://unsplash.com/fr/photos/fleurs-blanches-et-violettes-dans-un-vase-noir-PTLBXS2zM0o" target="_blank">Unsplash</a>
+            </li>
+        </ul>
         </section>
+
 
 
     </main>
 
     <footer>
         <div class="footerContainer">
-    
+
             <div class="footerBrand">
-                <a href="/project/index.html" class="brand">
-                    <img src="images/gardenia-logo.svg" alt="Gardenia Logo" class="logo">
+                <a href="index.html" class="brand">
+                    <img src="images/gardenia-logo.svg" alt="Gardenia Logo" class="logo" loading="lazy">
                     <h3>Gardenia</h3>
                 </a>
                 <p>Thoughtfully crafted bouquets for every occation.</p>
             </div>
-    
+
             <div class="footerContact">
                 <h4>Contact</h4>
                 <p>Email: hello@gardenia.com</p>
@@ -85,9 +96,11 @@
                 <p>Open: Mon–Sat 9 a.m - 5 p.m</p>
             </div>
         </div>
-    
+
         <div class="footerBottom">
             <p>&copy; <span id="currentyear"></span> Gardenia | Sara Latorre</p>
+            <p><a href="references.html">References</a></p>
+
         </div>
     </footer>
 
